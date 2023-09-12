@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KittyGlam.com</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlazar tu archivo CSS externo si lo tienes -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #73e3afb6;
+    }
+    header {
+      background-color: #e0c352;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .main-content {
+      padding: 20px 0;
+    }
+    .cat-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .cat-friendly-colors {
+      background-color: #278dd1;
+      color: #fff;
+      padding: 20px;
+    }
+    .icon-cat-paw {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .cat-tipography {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+    .cat-animation {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+    .interactive-element {
+      text-align: center;
+    }
+    .cta-button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenidos a KittyGlam</h1>
+    <p>Donde la belleza y el bienestar de tu gato son nuestra prioridad.</p>
+    <img src="happy_cat.jpg" alt="Gato Feliz" class="cat-image">
+  </header>
+  <div class="container">
+    <div class="main-content">
+      <h2>Nuestros Servicios</h2>
+      <div class="row">
+        <!-- Servicio 1 - Corte de Pelo -->
+        <div class="col-md-4">
+          <div class="service cat-friendly-colors text-center">
+            <img src="corte_de_pelo.jpg" alt="Corte de Pelo" class="cat-image img-fluid">
+            <h2><i class="fas fa-paw icon-cat-paw"></i>Corte de Pelo</h2>
+            <p>Deja que nuestros peluqueros expertos mimen a tu gato con un corte de pelo a medida.</p>
+          </div>
+        </div>
+        
+        <!-- Servicio 2 - Baño y Aseo -->
+        <div class="col-md-4">
+          <div class="service cat-friendly-colors text-center">
+            <img src="baño_gato.jpg" alt="Baño y Aseo" class="cat-image img-fluid">
+            <h2><i class="fas fa-paw icon-cat-paw"></i>Baño y Aseo</h2>
+            <p>Ofrecemos baños relajantes y aseo completo para mantener a tu gato limpio y saludable.</p>
+          </div>
+        </div>
+        
+        <!-- Servicio 3 - Desenredado -->
+        <div class="col-md-4">
+          <div class="service cat-friendly-colors text-center">
+            <img src="desenredado.jpg" alt="Desenredado" class="cat-image img-fluid">
+            <h2><i class="fas fa-paw icon-cat-paw"></i>Desenredado</h2>
+            <p>Eliminamos los enredos del pelaje de tu gato con cuidado y paciencia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <h2>Diviértete con tu Gato</h2>
+      <button class="cta-button" onclick="openWebsiteLinks()">Enlaces a otras páginas</button>
+  </div>
+
+  <!-- Popup de Enlaces a Otras Páginas -->
+  <div class="popup" id="websiteLinksPopup">
+      <h2>Paginas que te podrian interesar</h2>
+      <div class="website-link img">
+          <img src="juguetes para gatos.jpg" alt="Logo Página 1">
+          <p>CATOYS</p>
+          <a href="https://magical-starburst-72cb40.netlify.app/#adopt" target="_blank">juguetes para gatos</a>
+      </div>
+      <div class="website-link img">
+          <img src="adopcion gatos.jpg" alt="Logo Página 2">
+          <p>Cats R US</p>
+          <a href="https://main--glistening-marshmallow-f21d9b.netlify.app/#" target="_blank">adoptar gatos</a>
+      </div>
+      <div class="website-link img">
+        <img src="comida para gatos.jpg" alt="Logo Página 3">
+        <p>Cats R US</p>
+        <a href="https://mark00es.github.io/PaginaComidaGatos/" target="_blank">comida para gatos</a>
+    </div>
+      <!-- Agrega más enlaces según sea necesario -->
+
+      <button onclick="closeWebsiteLinks()">Cerrar</button>
+  </div>
+
+  <script>
+      function openWebsiteLinks() {
+          // Mostrar el popup de enlaces a otras páginas
+          document.getElementById("websiteLinksPopup").style.display = "block";
+      }
+
+      function closeWebsiteLinks() {
+          // Cerrar el popup de enlaces a otras páginas
+          document.getElementById("websiteLinksPopup").style.display = "none";
+      }
+  </script>
+    <div class="main-content">
+      <h2>Citas y Reservas</h2>
+      <p>¿Listo para que tu gato se vea y se sienta increíble?</p>
+      <button class="cta-button" onclick="openAppointmentForm()">Agenda una Cita</button>
+  </div>
+
+  <!-- Popup de Citas -->
+  <div class="popup" id="appointmentPopup">
+      <h2>Agenda una Cita</h2>
+      <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+          <label for="nombreGato">Nombre del Gato(s):</label>
+          <input type="text" id="nombreGato" name="nombreGato" required><br><br>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          <input type="submit" value="Enviar">
+      </form>
+      <button onclick="closeAppointmentForm()">Cerrar</button>
+  </div>
+
+  <script>
+      function openAppointmentForm() {
+          // Mostrar el popup de citas
+          document.getElementById("appointmentPopup").style.display = "block";
+      }
+
+      function closeAppointmentForm() {
+          // Cerrar el popup de citas
+          document.getElementById("appointmentPopup").style.display = "none";
+      }
+  </script>
+</body>
+</html>
